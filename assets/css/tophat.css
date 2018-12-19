@@ -1,0 +1,29 @@
+#tophat .list-label {
+  transition: opacity 0.5s ease;
+  opacity: 0.6;
+}
+#tophat .list-item {
+  transition: opacity 0.5s ease;
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+#tophat .list-item.active, #tophat .list-item:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+#tophat:hover .list-label {
+  opacity: 1;
+}
+
+.bg-cf-purple {
+  background-color: #15003E;
+}
+.text-cf-purple {
+  color: #15003E;
+}
+.bg-cf-green {
+  background-color: #0FCE7C;
+}
+.text-cf-green {
+  color: #0FCE7C;
+}

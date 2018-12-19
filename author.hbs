@@ -1,0 +1,24 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+<div class="container space-2 space-top-md-5 space-top-lg-4"></default>
+
+	{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+  <div class="mainheading {{#if feature_image}} homecover {{/if}}" {{#if feature_image}} style="background-image:url({{feature_image}});" {{/if}}>
+    <h2 class="mb-5">{{#author}}<span class="title">{{name}}{{t "'s"}} {{t "Stories"}}</span>{{/author}} {{pagination}} <div class="clearfix"></div></h2>
+  </div>
+
+	<section class="w-lg-80 mx-auto">
+		{{#foreach posts}}
+			{{^if featured}}
+				{{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+				{{> "post-card"}}
+			{{/if}}
+		{{/foreach}}
+
+		<div class="space-bottom-2"></div>
+		
+		{{pagination}}
+	</section>
+
+</div>

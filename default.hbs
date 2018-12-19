@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {{!-- Page Meta --}}
+  <title>{{meta_title}}</title>
+  {{!-- Mobile Meta --}}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  {{!-- Brand icon --}}
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  {{!-- Styles'n'Scripts --}}
+  <link rel="stylesheet" href="{{asset "vendor/font-awesome/css/fontawesome-all.min.css"}}">
+  <link rel="stylesheet" href="{{asset "vendor/animate.css/animate.min.css"}}">
+  <link rel="stylesheet" href="{{asset "vendor/hs-megamenu/src/hs.megamenu.css"}}">
+  <link rel="stylesheet" href="{{asset "vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"}}">
+  <link rel="stylesheet" href="{{asset "vendor/dzsparallaxer/dzsparallaxer.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/tophat.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/components.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/theme.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  {{!-- Ghost outputs important style and meta data with this tag --}}
+  {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--abs-top-md u-header--bg-transparent u-header--show-hide-md"
+          data-header-fix-moment="500" data-header-fix-effect="slide">
+    <!-- Topbar -->
+    <div class="bg-cf-purple" id="tophat">
+      <div class="container u-header__hide-content">
+        <div class="d-flex align-items-center">
+          <div class="mx-auto">
+            <div class="d-inline-block d-md-none position-relative mt-3">
+              <ul class="list-inline">
+                <li class="list-inline-item mx-3">
+                  <a href="https://gitcoin.co" target="_blank">
+                    <img src="{{asset "img/tophat/gitcoin-symbol.svg"}}" class="list-item" style="height: 51px; position: relative;" />
+                  </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                  <a href="https://codefund.app" target="_blank">
+                    <img src="{{asset "img/tophat/codefund-symbol.svg"}}" class="list-item active" style="height: 48px; position: relative; top: -1px;" />
+                  </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                  <a href="https://gitcoin.co/kudos/" target="_blank">
+                    <img src="{{asset "img/tophat/kudos-symbol.svg"}}" class="list-item active" style="height: 48px; position: relative; top: -1px;" />
+                  </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                  <a href="https://gitcoin.co/grants/" target="_blank">
+                    <img src="{{asset "img/tophat/grants-symbol.svg"}}" class="list-item active" style="height: 48px; position: relative; top: -1px;" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-none d-md-inline-block ml-md-auto" style="height: 40px;">
+              <ul class="list-inline" style="position: relative; top: 7px;">
+                <li class="list-inline-item text-light list-label">Grow Open Source</li>
+                <li class="list-inline-item mx-3">
+                  <a href="https://gitcoin.co" target="_blank">
+                    <img src="{{asset "img/tophat/gitcoin-logo.svg"}}" class="list-item" style="height: 20px; position: relative; top: -3px;" />
+                  </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                  <a href="https://codefund.app" target="_blank">
+                    <img src="{{asset "img/tophat/codefund-logo.svg"}}" class="list-item active" style="height: 18px; position: relative; top: -1px;" />
+                  </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                  <a href="https://gitcoin.co/kudos/" target="_blank">
+                    <img src="{{asset "img/tophat/kudos-logo.svg"}}" class="list-item active" style="height: 20px; position: relative; top: -1px;" />
+                  </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                  <a href="https://gitcoin.co/grants/" target="_blank">
+                    <img src="{{asset "img/tophat/grants-logo.svg"}}" class="list-item active" style="height: 20px; position: relative; top: -1px;" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Topbar -->
+
+    <div class="u-header__section" style="background-color: rgba(255,255,255,0.9);">
+      <div id="logoAndNav" class="container">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
+          <!-- Logo -->
+          <a href="https://codefund.app" class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center">
+            <img src="{{asset "img/codefund-w.svg"}}" alt="CodeFund" />
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn u-hamburger"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <span id="hamburgerTrigger" class="u-hamburger__box">
+              <span class="u-hamburger__inner"></span>
+            </span>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+            <ul class="navbar-nav u-header__navbar-nav">
+              <li class="nav-item"><a href="https://codefund.app" class="nav-link u-header__nav-link">Home</a></li>
+              <li class="nav-item"><a href="https://codefund.app/advertisers" class="nav-link u-header__nav-link">Advertisers</a></li>
+              <li class="nav-item"><a href="https://codefund.app/publishers" class="nav-link u-header__nav-link">Publishers</a></li>
+              <li class="nav-item active"><a href="https://blog.codefund.app" class="nav-link u-header__nav-link active">Blog</a></li>
+              <li class="nav-item"><a href="https://codefund.groovehq.com/help_center" class="nav-link u-header__nav-link">Help</a></li>
+              <li class="nav-item u-header__nav-last-item">
+                <a href="https://codefund.app/users/sign_in" class="btn btn-sm btn-primary transition-3d-hover">Login</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content" role="main">
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+  </main>
+
+  <!-- CTA Section -->
+  <div class="bg-primary text-white text-center">
+    <div class="container space-1">
+      <span class="h6 d-block d-lg-inline-block font-weight-light mb-lg-0">
+        <span class="font-weight-semi-bold">Join CodeFund</span> and learn how ethical advertising can work for you.
+      </span>
+      <a class="btn btn-sm btn-white transition-3d-hover font-weight-normal ml-2" href="https://codefund.app">Learn More</a>
+    </div>
+  </div>
+  <!-- End CTA Section -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <!-- Lists -->
+    <div class="border-bottom">
+      <div class="container space-2">
+        <div class="row justify-content-md-between">
+          <div class="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+            <h4 class="h6 font-weight-semi-bold">About</h4>
+
+            <!-- List Group -->
+            <ul class="list-group list-group-flush list-group-borderless mb-0">
+              <li><a href="https://codefund.app/advertisers" class="list-group-item list-group-item-action">Advertise with Us</a></li>
+              <li><a href="https://codefund.app/publishers" class="list-group-item list-group-item-action">Become a Publisher</a></li>
+              <li><a href="https://codefund.app/contact" class="list-group-item list-group-item-action">Contact</a></li>
+            </ul>
+            <!-- End List Group -->
+          </div>
+
+          <div class="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+            <h4 class="h6 font-weight-semi-bold">Company</h4>
+
+            <!-- List Group -->
+            <ul class="list-group list-group-flush list-group-borderless mb-0">
+              <li><a href="https://codefund.app/team" class="list-group-item list-group-item-action">Team</a></li>
+              <li><a href="https://blopg.codefund.app" class="list-group-item list-group-item-action">Blog</a></li>
+              <li><a href="https://gitcoin.co" target="_blank" class="list-group-item list-group-item-action">Gitcoin</a></li>
+            </ul>
+            <!-- End List Group -->
+          </div>
+
+          <div class="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+            <h4 class="h6 font-weight-semi-bold">Resources</h4>
+
+            <!-- List Group -->
+            <ul class="list-group list-group-flush list-group-borderless mb-0">
+              <li><a href="https://status.codefund.io" class="list-group-item list-group-item-action">Status</a></li>
+              <li><a href="https://www.iubenda.com/privacy-policy/47597768" class="list-group-item list-group-item-action iubenda-nostyle no-brand iubenda-embed iub-legal-only" title="Privacy Policy">Privacy Policy</a></li>
+              <li><a href="https://www.iubenda.com/privacy-policy/47597768/cookie-policy" class="list-group-item list-group-item-action iubenda-nostyle no-brand iubenda-embed" title="Cookie Policy">Cookie Policy</a></li>
+            </ul>
+            <!-- End List Group -->
+          </div>
+
+          <div class="col-md-7 col-lg-5 mb-4 mb-md-0">
+            <div class="mb-4">
+              <h3 class="h6">
+                <strong>Get our weekly newsletter!</strong>
+              </h3>
+              <p class="font-size-14">Get weekly updates on our progress. Never spam.</p>
+            </div>
+
+            <!-- Form -->
+            <div id="mc_embed_signup">
+              <form action="https://codefund.us16.list-manage.com/subscribe/post?u=e95ff716114dbc939f8ef6100&amp;id=f036681f65" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate js-validate js-form-message" target="_blank" novalidate>
+                <div class="js-focus-state input-group u-form">
+                  <input type="email" class="form-control u-form__input" name="EMAIL" id="mce-EMAIL" required
+                      placeholder="Enter your email address"
+                      aria-label="Enter your email address"
+                      data-msg="Please enter your email address"
+                      data-error-class="u-has-error"
+                      data-success-class="u-has-success"
+                      data-rule-email="true">
+                  <span class="input-group-append u-form__append">
+                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary u-btn-primary">Subscribe</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+            <!-- End Form -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Lists -->
+
+    <!-- Copyright -->
+    <div class="container text-center space-1">
+      <!-- Logo -->
+      <a class="d-inline-block mb-2" href="https://codefund.app" aria-label="CodeFund">
+        <img src="{{asset "img/codefund-logo.svg"}}" alt="CodeFund" style="width: 30px;" />
+      </a>
+      <!-- End Logo -->
+
+      <p class="small text-muted">
+        &copy; 2018 &copy; CodeFund. All rights reserved.<br/>
+        <small><a href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/" target="_blank">Front Theme</a> 2018 &copy; Htmlstream. All rights reserved.</small>
+        <br>
+        <small><a href="https://undraw.co/" target="_blank">Illustrations</a> created by <a href="https://twitter.com/ninalimpi">Katerina Limpitsoun</a>.</small>
+        <br>
+        <small>Stock images purchased from <a href="https://www.onepixel.com/" target="_blank">Onepixel</a>.</small>
+        <br>
+        <small>Blog engine by <a href="https://ghost.org/" target="_blank">Ghost</a>.</small>
+      </p>
+    </div>
+    <!-- End Copyright -->
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="#"
+    data-controller="go-to"
+    data-position='{"bottom": 15, "left": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
+  {{!-- Ghost outputs important scripts and data with this tag --}}
+  {{ghost_foot}}
+
+  <!-- JS Global Compulsory -->
+  <script src="{{asset "vendor/jquery/dist/jquery.min.js"}}"></script>
+  <script src="{{asset "vendor/jquery-migrate/dist/jquery-migrate.min.js"}}"></script>
+  <script src="{{asset "vendor/popper.js/dist/umd/popper.min.js"}}"></script>
+  <script src="{{asset "vendor/bootstrap/bootstrap.min.js"}}"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="{{asset "vendor/hs-megamenu/src/hs.megamenu.js"}}"></script>
+  <script src="{{asset "vendor/svg-injector/dist/svg-injector.min.js"}}"></script>
+  <script src="{{asset "vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"}}"></script>
+  <script src="{{asset "vendor/jquery-validation/dist/jquery.validate.min.js"}}"></script>
+  <script src="{{asset "assets/vendor/dzsparallaxer/dzsparallaxer.js"}}"></script>
+
+  <!-- JS Front -->
+  <script src="{{asset "js/hs.core.js"}}"></script>
+  <script src="{{asset "js/components/hs.header.js"}}"></script>
+  <script src="{{asset "js/components/hs.unfold.js"}}"></script>
+  <script src="{{asset "js/components/hs.malihu-scrollbar.js"}}"></script>
+  <script src="{{asset "js/components/hs.validation.js"}}"></script>
+  <script src="{{asset "js/components/hs.focus-state.js"}}"></script>
+  <script src="{{asset "js/components/hs.show-animation.js"}}"></script>
+  <script src="{{asset "js/components/hs.sticky-block.js"}}"></script>
+  <script src="{{asset "js/components/hs.svg-injector.js"}}"></script>
+  <script src="{{asset "js/components/hs.go-to.js"}}"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 767.98,
+        hideTimeOut: 0
+      });
+
+      // initialization of svg injector module
+      $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
+    });
+
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of unfold component
+      $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+        afterOpen: function () {
+          $(this).find('input[type="search"]').focus();
+        }
+      });
+
+      // initialization of malihu scrollbar
+      $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
+
+      // initialization of show animations
+      $.HSCore.components.HSShowAnimation.init('.js-animation-link');
+
+      // initialization of form validation
+      $.HSCore.components.HSValidation.init('.js-validate', {
+        rules: {
+          confirmPassword: {
+            equalTo: '#signupPassword'
+          }
+        }
+      });
+
+      // initialization of forms
+      $.HSCore.components.HSFocusState.init();
+
+      // initialization of sticky blocks
+      $.HSCore.components.HSStickyBlock.init('.js-sticky-block');
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+  </script>
+</body>
+</html>

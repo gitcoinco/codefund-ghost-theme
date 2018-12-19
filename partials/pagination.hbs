@@ -1,0 +1,22 @@
+<!-- Pagination -->
+<nav aria-label="Page navigation">
+  <ul class="pagination mb-0">
+    {{#if prev}}
+      <li class="page-item ml-0">
+        <a class="page-link" href="{{page_url prev}}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+    {{/if}}
+    {{#if next}}
+      <li class="page-item">
+        <a class="page-link" href="{{page_url next}}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+        </a>
+      </li>
+    {{/if}}
+  </ul>
+</nav>
+<!-- End Pagination -->

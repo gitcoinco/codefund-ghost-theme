@@ -1,0 +1,139 @@
+{{!< default}}
+
+{{#post}}
+
+  <!-- Hero Section -->
+  <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll" data-options='{direction: "normal"}'>
+    <!-- Apply your Parallax background image here -->
+    <div class="divimage dzsparallaxer--target" style="height: 130%; background-image: url({{img_url feature_image size="xl"}});"></div>
+
+    <!-- Content -->
+    <div class="js-scroll-effect position-relative"
+          data-scroll-effect="smoothFadeToBottom">
+      <div class="container space-top-2 space-bottom-1 space-top-md-5">
+        <div class="text-center w-lg-80 mx-auto space-bottom-2 space-bottom-md-3">
+          <h1 class="display-4 font-size-md-down-5 text-white font-weight-normal mb-0">{{title}}</h1>
+        </div>
+
+        <!-- Author -->
+        {{#primary_author}}
+        <div class="text-center">
+          <div class="u-avatar mx-auto mb-2">
+            <img class="img-fluid rounded-circle" src="{{profile_image}}" alt="{{name}}">
+          </div>
+          <span class="d-block">
+            <a class="text-white h6 mb-0" href="{{url}}">{{name}}</a>
+          </span>
+        </div>
+        {{/primary_author}}
+        <!-- End Author -->
+      </div>
+    </div>
+    <!-- End Content -->
+  </div>
+  <!-- End Hero Section -->
+
+  <!-- Description Section -->
+  <div class="container space-top-1 space-top-md-3">
+    <div class="w-lg-60 mx-auto">
+      <div class="mb-4">
+        <span class="text-muted">{{date format="DD MMMM YYYY"}}</span>
+      </div>
+
+      <div class="mb-5 article-post {{post_class}}">
+        {{content}}
+      </div>
+    </div>
+  </div>
+  <!-- End Description Section -->
+
+  <!-- Tags / Share / Author Section -->
+  <div class="container space-bottom-2 space-bottom-md-3 space-top-2">
+    <div class="w-lg-60 mx-auto">
+      <!-- Tags -->
+      {{#if tags}}
+        <ul class="list-inline text-center mb-0">
+          {{#foreach tags}}
+            <li class="list-inline-item pb-3">
+              <a class="btn btn-xs btn-gray btn-pill tag tag-{{id}} {{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+            </li>
+          {{/foreach}}
+        </ul>
+      {{/if}}
+      <!-- End Tags -->
+
+      <hr class="my-7">
+
+      <!-- Social Networks -->
+      <ul class="list-inline text-center mb-0">
+        <li class="list-inline-item">
+          <a class="btn btn-icon btn-soft-secondary btn-bg-transparent" target="_blank"
+            href="https://facebook.com/sharer/sharer.php?u={{url absolute="true"}}">
+            <span class="fab fa-facebook-f btn-icon__inner"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon btn-soft-secondary btn-bg-transparent" target="_blank"
+            href="https://plus.google.com/share?url={{url absolute="true"}}">
+            <span class="fab fa-google btn-icon__inner"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon btn-soft-secondary btn-bg-transparent" target="_blank"
+            href="https://twitter.com/intent/tweet/?text={{title}}&amp;url={{url absolute="true"}}">
+            <span class="fab fa-twitter btn-icon__inner"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon btn-soft-secondary btn-bg-transparent" target="_blank"
+            href="https://pinterest.com/pin/create/button/?url={{url absolute="true"}}&amp;media={{img_url feature_image size="xl"}}&amp;description={{title}}">
+            <span class="fab fa-pinterest btn-icon__inner"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon btn-soft-secondary btn-bg-transparent" target="_blank"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{title}}&amp;summary={{excerpt words="15"}}...&amp;source={{@blog.url}}">
+            <span class="fab fa-linkedin btn-icon__inner"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-icon btn-soft-secondary btn-bg-transparent" target="_blank"
+            href="https://reddit.com/submit/?url={{url absolute="true"}}">
+            <span class="fab fa-reddit btn-icon__inner"></span>
+          </a>
+        </li>
+      </ul>
+      <!-- End Social Networks -->
+
+      <hr class="my-7">
+
+      <!-- Author -->
+      {{#primary_author}}
+      <div class="media">
+        <div class="u-avatar mr-3">
+          <img class="img-fluid rounded-circle" src="{{profile_image}}" alt="{{name}}">
+        </div>
+        <div class="media-body">
+          <div class="row mb-3 mb-sm-0">
+            <div class="col-sm-9 mb-2">
+              <h4 class="d-inline-block mb-0">
+                <a class="d-block h6 mb-0" href="{{url}}">{{name}}</a>
+              </h4>
+              {{#if location}}
+                <small class="d-block text-muted">{{location}}</small>
+              {{/if}}
+            </div>
+            <div class="col-sm-3 text-sm-right">
+              <a href="{{url}}" class="btn btn-xs btn-soft-primary font-weight-semi-bold transition-3d-hover">Follow</a>
+            </div>
+          </div>
+          <p class="small">{{bio}}</p>
+        </div>
+      </div>
+      {{/primary_author}}
+      <!-- End Author -->
+    </div>
+  </div>
+  <!-- End Tags / Share / Author Section -->
+
+{{/post}}
