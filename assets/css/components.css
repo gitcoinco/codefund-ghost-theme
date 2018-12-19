@@ -133,3 +133,67 @@ tr.border-bottom, tr.border-bottom td {
     padding-bottom: 1.1rem !important;
   }
 }
+
+.article-post h1,
+.article-post h2,
+.article-post h3 {
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.article-post h2 {
+  font-size: 1.8rem;
+}
+.article-post h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.article-post p {
+  font-size: 1.1rem;
+}
+.article-post figure {
+  margin-bottom: 1rem;
+}
+.article-post ul,
+.article-post ol {
+  padding-left: 1.1rem;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.article-post ul li,
+.article-post ol li {
+  padding-bottom: 0.7rem;
+}
+.article-post figcaption {
+  text-align: center;
+  color: #999999;
+  font-size: 85%;
+}
+
+.article-post hr {
+  margin-top: 52px;
+  margin-bottom: 42px;
+  display: block;
+  border: 0;
+  text-align: center;
+  overflow: visible;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.article-post hr:before {
+  --x-height-multiplier: 0.342;
+  --baseline-multiplier: 0.22;
+  font-family: medium-content-slab-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 30px;
+  letter-spacing: .6em;
+  content: '...';
+  display: inline-block;
+  margin-left: .6em;
+  color: rgba(0,0,0,.68);
+  position: relative;
+  top: -30px;
+}
