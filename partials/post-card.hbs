@@ -2,19 +2,21 @@
   <div class="card-body p-0">
     <div class="row">
       <div class="col-sm-5 mb-5 mb-sm-0">
-        <img class="img-fluid w-100 rounded" src="../../assets/img/480x320/img12.jpg" alt="Image Description">
+        <img class="img-fluid w-100 rounded" src="{{feature_image}}" alt="{{title}}">
       </div>
 
       <div class="col-sm-7">
         <div class="pt-1 pr-4">
           <small class="d-block text-muted mb-3">{{date format="DD MMMM YYYY"}}</small>
-          <div class="mb-7">
+          <div class="mb-3">
             <h2 class="h5">
               <a href="{{url}}">{{title}}</a>
             </h2>
             <p>{{excerpt words="15"}}...</p>
           </div>
-          <small class="d-block text-secondary">by <a class="text-dark font-weight-semi-bold" href="#">{{primary_author.name}}</a></small>
+          {{#primary_author}}
+            <small class="d-block text-secondary">by <a class="text-dark font-weight-semi-bold" href="{{url}}">{{name}}</a></small>
+          {{/primary_author}}
         </div>
       </div>
     </div>
